@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Love letter for crush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="love letter 2.css" />
+</head>
+<body>
+    <div class="input-fields">
+        <input type="text" id="userName" placeholder="Your name (or leave blank for secret admirer)" />
+        <input type="text" id="crushName" placeholder="Crush's name" />
+        <textarea id="message" placeholder="Your message"></textarea>
+        <button id="saveMessage">Save & Generate Link</button>
+        <div id="generatedLink"></div>
+    </div>
+
+    <div class="envlope-wrapper">
+        <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+                <div class="words line1">To: <span id="toCrush">Crush</span></div>
+                <div class="words line2">Dear <span id="dearCrush">crush</span>,</div>
+                <div class="words line3" id="messageContent"></div>
+            </div>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="reset">
+        <button id="open">Open</button>
+        <button id="reset">Close</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="love letter 2.js"></script>
+</body>
+</html>
