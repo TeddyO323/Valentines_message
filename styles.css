@@ -3,10 +3,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Ensures full screen height */
   background-color: #fae1dd;
   flex-direction: column;
-  padding: 20px;
+
 }
 
 /* Main Container */
@@ -14,8 +14,12 @@ body {
   position: relative;
   width: 90%; /* Adjusts width for smaller screens */
   max-width: 400px; /* Prevents it from being too wide */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
+
 
 /* Envelope */
 .envelope {
@@ -242,7 +246,11 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: 350px;
 }
+
 
 #linkContainer {
   position: absolute;
@@ -252,7 +260,14 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  justify-content: center;
+  margin-top: 10px; /* Small space below name input */
+  width: 100%;
+  max-width: 350px;
 }
+
+
 
 #sendBackContainer {
   position: absolute;
@@ -294,18 +309,6 @@ body {
   background-color: darkred;
 }
 
-/* Responsive Styling for Smaller Screens */
-@media screen and (max-width: 480px) {
-  #nameInput, #generatedLink {
-    max-width: 250px;  /* Slightly smaller for mobile */
-    font-size: 14px;  /* Reduces font size for readability */
-  }
-
-  #updateName, #copyLink, #sendBack {
-    max-width: 180px;  /* Ensures buttons scale down */
-    font-size: 14px;
-  }
-}
 
 
 #sendBack {
@@ -322,19 +325,42 @@ body {
   background-color: darkred;
 }
 
-/* Media Query for Smaller Screens */
+
+/* Responsive Styling */
 @media screen and (max-width: 480px) {
   .container {
-    max-width: 500px;
+    max-width: 320px;
   }
 
+  /* Adjust envelope proportionally */
+  .envelope {
+    width: 250px;
+    height: 180px;
+  }
+
+  /* Adjust input & button positions proportionally */
+  .name-input {
+    top: 700px;
+    max-width: 250px;
+  }
+
+  #linkContainer {
+    top: 750px;
+    max-width: 250px;
+  }
+
+  #sendBackContainer {
+    top: 700px;
+  }
+
+  /* Adjust input and button sizes */
   #nameInput, #generatedLink {
-    max-width: 550px;
+    max-width: 250px;
     font-size: 14px;
   }
 
   #updateName, #copyLink, #sendBack {
-    max-width: 500px;
+    max-width: 180px;
     font-size: 14px;
   }
 }
