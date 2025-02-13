@@ -84,7 +84,7 @@ body {
   position: absolute;
   font-family: 'Brush Script MT', cursive;
   font-size: 28px;
-  text-align: center;
+  text-align: left;
   line-height:25px;
   top:19px;
   left:85px;
@@ -219,7 +219,7 @@ body {
 
 .shadow {
   position: absolute;
-  width: 330px;
+  width: 410px;
   height: 25px;
   border-radius:50%;
   background-color: rgba(0,0,0,0.3);
@@ -326,6 +326,28 @@ body {
 }
 
 
+.controls {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.controls button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 5px;
+}
+
+.controls button:hover {
+  background-color: #d63055;
+}
+
 /* Responsive Styling */
 @media screen and (max-width: 480px) {
   .container {
@@ -336,6 +358,10 @@ body {
   .envelope {
     width: 300px;
     height: 180px;
+  }
+
+  .shadow {
+    width: 350px;
   }
 
   /* Adjust input & button positions proportionally */
@@ -364,3 +390,4 @@ body {
     font-size: 14px;
   }
 }
+

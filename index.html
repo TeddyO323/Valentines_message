@@ -11,11 +11,14 @@
 
     <div class="container">  
         <div class="valentines">
-            <div class="envelope"></div>
-            <div class="front"></div>
-            <div class="card">
-                <div class="text">Happy<br>Valentine's<br>Day, <span id="nameDisplay">Dear</span>!</div>
-                <div class="heart"></div>
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="card">
+                        <div class="text">Happy<br>Valentine's<br>Day, <span id="nameDisplay">Dear</span>!</div>
+                        <div class="heart"></div>
+                    </div>
+                </div>
+                <div class="front"></div>
             </div>
             <div class="hearts">
                 <div class="one"></div>
@@ -26,25 +29,30 @@
             </div>
         </div>
         <div class="shadow"></div>
+
+       <!-- Open & Close Buttons -->
+<div class="controls">
+    <button id="openBtn">Open</button>
+    <button id="closeBtn" style="display: none;">Close</button>
+</div>
     </div>
-<!-- Name Input Section -->
-<div class="name-input">
-    <input type="text" id="nameInput" placeholder="Enter a name">
-    <button id="updateName">Send Love ❤️</button>
-</div>
 
-<!-- Link Container (Now Separate) -->
-<div id="linkContainer" style="display: none;">
-    <input type="text" id="generatedLink" readonly>
-    <button id="copyLink">Copy</button>
-</div>
+    <!-- Name Input Section -->
+    <div class="name-input">
+        <input type="text" id="nameInput" placeholder="Enter a name" autocomplete="off" autocorrect="off" spellcheck="false">
+        <button id="updateName">Send Love ❤️</button>
+    </div>
 
+    <!-- Link Container (Now Separate) -->
+    <div id="linkContainer" style="display: none;">
+        <input type="text" id="generatedLink" readonly>
+        <button id="copyLink">Copy</button>
+    </div>
 
-<!-- Button to allow the crush to send their love back -->
-<div id="sendBackContainer" style="display: none; text-align: center; margin-top: 20px;">
-    <button id="sendBack">Send Your Love Back ❤️</button>
-</div>
-
+    <!-- Button to allow the crush to send their love back -->
+    <div id="sendBackContainer" style="display: none; text-align: center; margin-top: 20px;">
+        <button id="sendBack">Send Your Love Back ❤️</button>
+    </div>
 
     <script src="script.js"></script>
 </body>

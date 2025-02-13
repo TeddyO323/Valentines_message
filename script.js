@@ -9,11 +9,17 @@ $(document).ready(function () {
         $('#sendBackContainer').show(); // Show the "Send Your Love Back" button
     }
 
-    // Card hover effect
-    $('.container').mouseenter(function () {
-        $('.card').stop().animate({ top: '-150px' }, 'slow');
-    }).mouseleave(function () {
-        $('.card').stop().animate({ top: '0px' }, 'slow');
+    // Open & Close Envelope Feature
+    $('#openBtn').click(function () {
+        $('.card').stop().animate({ top: '-150px' }, 'slow'); // Open animation
+        $('#openBtn').hide(); // Hide Open button
+        $('#closeBtn').show(); // Show Close button
+    });
+
+    $('#closeBtn').click(function () {
+        $('.card').stop().animate({ top: '0px' }, 'slow'); // Close animation
+        $('#closeBtn').hide(); // Hide Close button
+        $('#openBtn').show(); // Show Open button
     });
 
     // Update name and generate link
