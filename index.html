@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Love letter for crush</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="love letter 2.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="input-fields">
-        <input type="text" id="userName" placeholder="Your name (or leave blank for secret admirer)" />
-        <input type="text" id="crushName" placeholder="Crush's name" />
-        <textarea id="message" placeholder="Your message"></textarea>
-        <button id="saveMessage">Save & Generate Link</button>
-        <div id="generatedLink"></div>
-    </div>
 
-    <div class="envlope-wrapper">
-        <div id="envelope" class="close">
-            <div class="front flap"></div>
-            <div class="front pocket"></div>
-            <div class="letter">
-                <div class="words line1">To: <span id="toCrush">Crush</span></div>
-                <div class="words line2">Dear <span id="dearCrush">crush</span>,</div>
-                <div class="words line3" id="messageContent"></div>
+    <div class="container">  
+        <div class="valentines">
+            <div class="envelope"></div>
+            <div class="front"></div>
+            <div class="card">
+                <div class="text">Happy<br>Valentine's<br>Day, <span id="nameDisplay">Dear</span>!</div>
+                <div class="heart"></div>
             </div>
             <div class="hearts">
-                <div class="heart a1"></div>
-                <div class="heart a2"></div>
-                <div class="heart a3"></div>
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
             </div>
         </div>
+        <div class="shadow"></div>
     </div>
-    <div class="reset">
-        <button id="open">Open</button>
-        <button id="reset">Close</button>
-    </div>
+<!-- Name Input Section -->
+<div class="name-input">
+    <input type="text" id="nameInput" placeholder="Enter a name">
+    <button id="updateName">Send Love ❤️</button>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="love letter 2.js"></script>
+<!-- Link Container (Now Separate) -->
+<div id="linkContainer" style="display: none;">
+    <input type="text" id="generatedLink" readonly>
+    <button id="copyLink">Copy</button>
+</div>
+
+
+<!-- Button to allow the crush to send their love back -->
+<div id="sendBackContainer" style="display: none; text-align: center; margin-top: 20px;">
+    <button id="sendBack">Send Your Love Back ❤️</button>
+</div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
